@@ -11,22 +11,28 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sicolaessential.us">
   <link rel="canonical" href="https://sicolaessential.us">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Main CSS -->
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='%230B1426'/><path d='M20 8L7 19.5V32h8v-8h10v8h8V19.5L20 8z' fill='white'/><circle cx='20' cy='22.7' r='2.7' fill='%2306B6D4'/><path d='M16 19.5q0-1.7 1.3-2.8t2.7-1.1 2.7 1.1 1.3 2.8' stroke='%2306B6D4' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='%230B1426'/><path d='M20 8L7 19.5V32h8v-8h10v8h8V19.5L20 8z' fill='white'/><circle cx='20' cy='22.7' r='2.7' fill='%2300D4AA'/></svg>">
 </head>
 <body>
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <nav class="nav">
       <a href="/" class="logo">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="10" fill="url(#g1)"/>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="10" fill="url(#lg1)"/>
           <path d="M20 8L7 19.5V32h8v-8h10v8h8V19.5L20 8z" fill="white"/>
-          <path d="M20 20c-1.5 0-2.7 1.2-2.7 2.7S18.5 25.4 20 25.4s2.7-1.2 2.7-2.7S21.5 20 20 20z" fill="#06B6D4"/>
-          <path d="M16 19.5q0-1.7 1.3-2.8t2.7-1.1 2.7 1.1 1.3 2.8" stroke="#06B6D4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <defs><linearGradient id="g1" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#0B1426"/><stop offset="100%" stop-color="#162035"/></linearGradient></defs>
+          <circle cx="20" cy="22" r="2.5" fill="#00D4AA"/>
+          <path d="M16 19q0-1.7 1.3-2.7t2.7-1 2.7 1T24 19" stroke="#00D4AA" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0B1426"/><stop offset="1" stop-color="#162035"/></linearGradient></defs>
         </svg>
         Sicola Essential
       </a>
@@ -37,250 +43,287 @@
         <li><a href="/contact">Contact</a></li>
         <li><a href="/contact" class="nav-cta">Get a Quote</a></li>
       </ul>
-      <button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button>
+      <button class="mobile-toggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80')"></div>
+    <div class="hero-mesh"></div>
+    <div class="hero-bg-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80')"></div>
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">&#9889; #1 Rated Smart Home Provider 2026</div>
-        <h1>Make Your Home <span>Smarter</span>, Safer &amp; More Efficient</h1>
-        <p>Sicola Essential delivers premium smart home appliances that seamlessly integrate into your lifestyle. From intelligent lighting to advanced security systems, we bring the future home.</p>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="hero-badge"><i class="bi bi-lightning-charge-fill"></i> #1 Rated Smart Home Provider 2026</div>
+        <h1>Make Your Home<br><span class="gradient-text">Brilliantly Connected</span></h1>
+        <p class="hero-description">Premium smart home appliances that seamlessly integrate into your lifestyle. Intelligent lighting, advanced security, and climate control — all in one ecosystem.</p>
         <div class="hero-buttons">
-          <a href="/products" class="btn btn-primary">Shop Products &#8594;</a>
-          <a href="/about" class="btn btn-outline">Learn More</a>
+          <a href="/products" class="btn btn-primary">Shop Products <i class="bi bi-arrow-right"></i></a>
+          <a href="/about" class="btn btn-outline-light">Learn More <i class="bi bi-play-circle"></i></a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item"><i class="bi bi-truck"></i> Free Shipping $99+</div>
+          <div class="hero-trust-item"><i class="bi bi-shield-check"></i> 2-Year Warranty</div>
+          <div class="hero-trust-item"><i class="bi bi-star-fill"></i> 4.9/5 Rating</div>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-grid">
-          <div class="hero-card">
-            <img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=80&h=80&fit=crop&q=80" alt="Smart Thermostat" loading="eager">
-            <div class="hero-card-text">
-              <h3>Smart Thermostat</h3>
-              <span class="price">From $199.99</span>
-            </div>
+      <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+        <div class="hero-showcase">
+          <div class="hero-showcase-main">
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df48c?auto=format&fit=crop&w=600&h=400&q=85" alt="Smart Home Living Room" loading="eager">
           </div>
-          <div class="hero-card">
-            <img src="https://images.unsplash.com/photo-1563461660947-507ef49e9c47?w=80&h=80&fit=crop&q=80" alt="LED Smart Bulb" loading="eager">
-            <div class="hero-card-text">
-              <h3>LED Bulb Kit</h3>
-              <span class="price">From $49.99</span>
-            </div>
+          <div class="hero-float-card" style="top:-20px;right:-20px;">
+            <div class="float-icon"><i class="bi bi-thermometer-half"></i></div>
+            <div><h4>Smart Climate</h4><span>Save 26% on energy</span></div>
           </div>
-          <div class="hero-card">
-            <img src="https://images.unsplash.com/photo-1557597774-9d475d4a2b7c?w=80&h=80&fit=crop&q=80" alt="Security Camera" loading="eager">
-            <div class="hero-card-text">
-              <h3>4K Camera</h3>
-              <span class="price">From $129.99</span>
-            </div>
+          <div class="hero-float-card" style="bottom:-15px;left:-20px;">
+            <div class="float-icon"><i class="bi bi-shield-lock"></i></div>
+            <div><h4>4K Security</h4><span>AI motion detection</span></div>
           </div>
-          <div class="hero-card">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=80&h=80&fit=crop&q=80" alt="Smart Coffee Maker" loading="eager">
-            <div class="hero-card-text">
-              <h3>Smart Coffee</h3>
-              <span class="price">From $89.99</span>
-            </div>
+          <div class="hero-float-card" style="bottom:70px;right:-30px;">
+            <div class="float-icon"><i class="bi bi-lightbulb"></i></div>
+            <div><h4>Smart Lighting</h4><span>16M colors</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <section class="trust-bar">
+  <!-- TRUST MARQUEE -->
+  <section class="trust-marquee">
+    <div class="marquee-track">
+      <div class="marquee-item"><i class="bi bi-truck"></i> Free Shipping Over $99</div>
+      <div class="marquee-item"><i class="bi bi-shield-check"></i> 2-Year Warranty</div>
+      <div class="marquee-item"><i class="bi bi-lock"></i> Secure Checkout (SSL)</div>
+      <div class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Processing</div>
+      <div class="marquee-item"><i class="bi bi-headset"></i> 24/7 Customer Support</div>
+      <div class="marquee-item"><i class="bi bi-credit-card"></i> Visa &bull; Mastercard &bull; PayPal &bull; Apple Pay</div>
+      <div class="marquee-item"><i class="bi bi-arrow-return-left"></i> 30-Day Returns</div>
+      <div class="marquee-item"><i class="bi bi-patch-check"></i> Certified Products</div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-item"><i class="bi bi-truck"></i> Free Shipping Over $99</div>
+      <div class="marquee-item"><i class="bi bi-shield-check"></i> 2-Year Warranty</div>
+      <div class="marquee-item"><i class="bi bi-lock"></i> Secure Checkout (SSL)</div>
+      <div class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Processing</div>
+      <div class="marquee-item"><i class="bi bi-headset"></i> 24/7 Customer Support</div>
+      <div class="marquee-item"><i class="bi bi-credit-card"></i> Visa &bull; Mastercard &bull; PayPal &bull; Apple Pay</div>
+      <div class="marquee-item"><i class="bi bi-arrow-return-left"></i> 30-Day Returns</div>
+      <div class="marquee-item"><i class="bi bi-patch-check"></i> Certified Products</div>
+    </div>
+  </section>
+
+  <!-- PRESS / LOGO WALL -->
+  <section class="logo-wall">
     <div class="container">
-      <div class="trust-items">
-        <div class="trust-item"><span class="trust-icon">&#128666;</span> Free Shipping Over $99</div>
-        <div class="trust-item"><span class="trust-icon">&#128276;</span> 2-Year Warranty</div>
-        <div class="trust-item"><span class="trust-icon">&#128274;</span> Secure Checkout</div>
-        <div class="trust-item"><span class="trust-icon">&#9889;</span> Same-Day Processing</div>
-        <div class="trust-item"><span class="trust-icon">&#128222;</span> 24/7 Support</div>
-        <div class="trust-item"><span class="trust-icon">&#128179;</span> Visa &bull; Mastercard &bull; PayPal &bull; Amex &bull; Apple Pay</div>
+      <div class="logo-wall-inner">
+        <span class="logo-wall-label">As Featured In</span>
+        <span class="logo-wall-item">Forbes</span>
+        <span class="logo-wall-item">TechCrunch</span>
+        <span class="logo-wall-item">WIRED</span>
+        <span class="logo-wall-item">CNET</span>
+        <span class="logo-wall-item">The Verge</span>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED IN / PRESS BAR -->
-  <section class="press-bar">
-    <div class="container">
-      <div class="press-bar-inner">
-        <span class="press-label">As Seen In</span>
-        <span class="press-logo">Forbes</span>
-        <span class="press-logo">TechCrunch</span>
-        <span class="press-logo">WIRED</span>
-        <span class="press-logo">CNET</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- CATEGORIES -->
+  <!-- CATEGORIES — Bento Grid -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <div class="section-label">Our Categories</div>
-        <h2>Smart Solutions for Every Room</h2>
-        <p>Explore our curated collection of smart home devices designed to enhance comfort, security, and energy efficiency throughout your home.</p>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Our Categories</div>
+        <h2>Smart Solutions for <span class="gradient-text">Every Room</span></h2>
+        <p>Explore our curated collection of smart home devices designed to enhance comfort, security, and energy efficiency.</p>
       </div>
-      <div class="categories-grid">
-        <a href="/products" class="category-card">
-          <img class="cat-img" src="https://images.unsplash.com/photo-1565814636199-ae8133055c1c?auto=format&fit=crop&w=600&h=400&q=80" alt="Smart Lighting category" loading="lazy">
+      <div class="bento-grid">
+        <a href="/products" class="bento-card span-2" data-aos="fade-up" data-aos-delay="0">
+          <img class="bento-img" src="https://images.unsplash.com/photo-1565814636199-ae8133055c1c?auto=format&fit=crop&w=900&h=500&q=80" alt="Smart Lighting" loading="lazy">
+          <div class="bento-arrow"><i class="bi bi-arrow-up-right"></i></div>
           <h3>Smart Lighting</h3>
-          <p>LED bulbs, light strips, dimmers and automated lighting systems with voice control</p>
+          <p>LED bulbs, light strips, dimmers and automated systems with voice control</p>
         </a>
-        <a href="/products" class="category-card">
-          <img class="cat-img" src="https://images.unsplash.com/photo-1557597774-9d475d4a2b7c?auto=format&fit=crop&w=600&h=400&q=80" alt="Security and Cameras category" loading="lazy">
+        <a href="/products" class="bento-card" data-aos="fade-up" data-aos-delay="100">
+          <img class="bento-img" src="https://images.unsplash.com/photo-1557597774-9d475d4a2b7c?auto=format&fit=crop&w=600&h=500&q=80" alt="Security Cameras" loading="lazy">
+          <div class="bento-arrow"><i class="bi bi-arrow-up-right"></i></div>
           <h3>Security &amp; Cameras</h3>
-          <p>Indoor/outdoor cameras, smart locks, video doorbells, and motion sensors</p>
+          <p>4K cameras, smart locks, doorbells</p>
         </a>
-        <a href="/products" class="category-card">
-          <img class="cat-img" src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?auto=format&fit=crop&w=600&h=400&q=80" alt="Climate Control category" loading="lazy">
+        <a href="/products" class="bento-card" data-aos="fade-up" data-aos-delay="200">
+          <img class="bento-img" src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?auto=format&fit=crop&w=600&h=500&q=80" alt="Climate Control" loading="lazy">
+          <div class="bento-arrow"><i class="bi bi-arrow-up-right"></i></div>
           <h3>Climate Control</h3>
-          <p>Smart thermostats, air quality monitors, humidifiers, and HVAC controllers</p>
+          <p>Thermostats, air monitors, HVAC</p>
         </a>
-        <a href="/products" class="category-card">
-          <img class="cat-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&h=400&q=80" alt="Smart Kitchen category" loading="lazy">
+        <a href="/products" class="bento-card" data-aos="fade-up" data-aos-delay="100">
+          <img class="bento-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&h=500&q=80" alt="Smart Kitchen" loading="lazy">
+          <div class="bento-arrow"><i class="bi bi-arrow-up-right"></i></div>
           <h3>Smart Kitchen</h3>
-          <p>Connected appliances, smart scales, automated coffee makers, and more</p>
+          <p>Connected appliances, scales, coffee makers</p>
+        </a>
+        <a href="/products" class="bento-card span-2" data-aos="fade-up" data-aos-delay="200">
+          <img class="bento-img" src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=900&h=500&q=80" alt="Smart Hubs" loading="lazy">
+          <div class="bento-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          <h3>Hubs &amp; Controllers</h3>
+          <p>Central control for your entire smart home ecosystem — voice, app, and automation</p>
+        </a>
+        <a href="/products" class="bento-card" data-aos="fade-up" data-aos-delay="300">
+          <img class="bento-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&h=500&q=80" alt="Smart Audio" loading="lazy">
+          <div class="bento-arrow"><i class="bi bi-arrow-up-right"></i></div>
+          <h3>Smart Audio</h3>
+          <p>Speakers, intercoms, multi-room</p>
         </a>
       </div>
     </div>
   </section>
 
   <!-- FEATURED PRODUCTS -->
-  <section class="section section-alt">
+  <section class="section section-warm">
     <div class="container">
-      <div class="section-header">
-        <div class="section-label">Featured Products</div>
-        <h2>Best Sellers This Month</h2>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Featured Products</div>
+        <h2>Best Sellers <span class="gradient-text">This Month</span></h2>
         <p>Hand-picked selection of our most popular smart home devices, loved by thousands of customers.</p>
       </div>
       <div class="products-grid">
 
         <!-- Smart LED Bulb Kit -->
-        <div class="product-card" data-category="lighting">
+        <div class="product-card" data-category="lighting" data-aos="fade-up" data-aos-delay="0">
           <div class="product-image product-gallery"
-               data-images='[{"src":"https://images.unsplash.com/photo-1563461660947-507ef49e9c47?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart LED Bulb — product close-up"},{"src":"https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart LED Bulb — living room ambiance"},{"src":"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart LED Bulb — bedroom scene"},{"src":"https://images.unsplash.com/photo-1493309752899-3d095df2e7fe?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart LED Bulb — modern lamp"},{"src":"https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart LED Bulb — kitchen accent lighting"}]'
+               data-images='[{"src":"https://images.unsplash.com/photo-1563461660947-507ef49e9c47?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart LED Bulb close-up"},{"src":"https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&h=560&q=90","alt":"Living room ambiance"},{"src":"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=560&q=90","alt":"Bedroom scene"},{"src":"https://images.unsplash.com/photo-1493309752899-3d095df2e7fe?auto=format&fit=crop&w=800&h=560&q=90","alt":"Modern lamp"},{"src":"https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&h=560&q=90","alt":"Kitchen accent lighting"}]'
                data-title="Smart LED Bulb Kit (4-Pack)">
             <span class="product-badge">Best Seller</span>
           </div>
           <div class="product-info">
             <div class="product-brand">Sicola Pro</div>
             <h3>Smart LED Bulb Kit (4-Pack)</h3>
-            <p>16 million colors, voice compatible with Alexa &amp; Google Home. Schedule &amp; automate.</p>
+            <p>16 million colors, voice compatible with Alexa &amp; Google Home.</p>
+            <div class="product-specs">
+              <span class="spec-chip"><i class="bi bi-palette"></i> 16M Colors</span>
+              <span class="spec-chip"><i class="bi bi-mic"></i> Voice Control</span>
+              <span class="spec-chip"><i class="bi bi-wifi"></i> Wi-Fi</span>
+            </div>
             <div class="product-footer">
               <span class="product-price">$49.99</span>
-              <span class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</span>
+              <span class="product-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 4.9</span>
             </div>
           </div>
-          <div class="product-add-to-cart">
-            <a href="/contact" class="btn-cart">Add to Cart</a>
-          </div>
+          <div class="product-add-to-cart"><a href="/contact" class="btn-cart"><i class="bi bi-cart-plus"></i> Add to Cart</a></div>
         </div>
 
         <!-- 4K Security Camera -->
-        <div class="product-card" data-category="security">
+        <div class="product-card" data-category="security" data-aos="fade-up" data-aos-delay="100">
           <div class="product-image product-gallery"
-               data-images='[{"src":"https://images.unsplash.com/photo-1557597774-9d475d4a2b7c?auto=format&fit=crop&w=800&h=560&q=90","alt":"4K Security Camera — on eave mount"},{"src":"https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&h=560&q=90","alt":"4K Security Camera — side angle"},{"src":"https://images.unsplash.com/photo-1596523019011-d58df08c4e12?auto=format&fit=crop&w=800&h=560&q=90","alt":"4K Security Camera — lens detail"},{"src":"https://images.unsplash.com/photo-1580610447943-1bfbef5efe07?auto=format&fit=crop&w=800&h=560&q=90","alt":"4K Security Camera — system setup"},{"src":"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=560&q=90","alt":"4K Security Camera — live feed on phone"}]'
+               data-images='[{"src":"https://images.unsplash.com/photo-1557597774-9d475d4a2b7c?auto=format&fit=crop&w=800&h=560&q=90","alt":"4K Security Camera mounted"},{"src":"https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&h=560&q=90","alt":"Side angle view"},{"src":"https://images.unsplash.com/photo-1596523019011-d58df08c4e12?auto=format&fit=crop&w=800&h=560&q=90","alt":"Lens detail"},{"src":"https://images.unsplash.com/photo-1580610447943-1bfbef5efe07?auto=format&fit=crop&w=800&h=560&q=90","alt":"System setup"},{"src":"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=560&q=90","alt":"Live feed on phone"}]'
                data-title="4K Outdoor Security Camera">
-            <span class="product-badge sale">-20%</span>
+            <span class="product-badge sale">-20% OFF</span>
           </div>
           <div class="product-info">
             <div class="product-brand">SecureView</div>
             <h3>4K Outdoor Security Camera</h3>
-            <p>Night vision, two-way audio, AI motion detection. Weather-resistant IP67 rated.</p>
+            <p>Night vision, two-way audio, AI motion detection. IP67 rated.</p>
+            <div class="product-specs">
+              <span class="spec-chip"><i class="bi bi-camera-video"></i> 4K UHD</span>
+              <span class="spec-chip"><i class="bi bi-moon"></i> Night Vision</span>
+              <span class="spec-chip"><i class="bi bi-droplet"></i> IP67</span>
+            </div>
             <div class="product-footer">
               <span class="product-price">$129.99 <span class="old">$159.99</span></span>
-              <span class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</span>
+              <span class="product-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 4.8</span>
             </div>
           </div>
-          <div class="product-add-to-cart">
-            <a href="/contact" class="btn-cart">Add to Cart</a>
-          </div>
+          <div class="product-add-to-cart"><a href="/contact" class="btn-cart"><i class="bi bi-cart-plus"></i> Add to Cart</a></div>
         </div>
 
         <!-- Smart Thermostat Pro -->
-        <div class="product-card" data-category="climate">
+        <div class="product-card" data-category="climate" data-aos="fade-up" data-aos-delay="200">
           <div class="product-image product-gallery"
-               data-images='[{"src":"https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Thermostat — wall display"},{"src":"https://images.unsplash.com/photo-1592093558427-10f80e60fa51?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Thermostat — round unit close-up"},{"src":"https://images.unsplash.com/photo-1538084977427-1ca021ef9b01?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Thermostat — modern living room"},{"src":"https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Thermostat — cozy temperature scene"},{"src":"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Thermostat — energy savings report"}]'
+               data-images='[{"src":"https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Thermostat on wall"},{"src":"https://images.unsplash.com/photo-1592093558427-10f80e60fa51?auto=format&fit=crop&w=800&h=560&q=90","alt":"Round unit close-up"},{"src":"https://images.unsplash.com/photo-1538084977427-1ca021ef9b01?auto=format&fit=crop&w=800&h=560&q=90","alt":"Modern living room"},{"src":"https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&h=560&q=90","alt":"Cozy scene"},{"src":"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=560&q=90","alt":"Energy report"}]'
                data-title="Smart Thermostat Pro">
-            <span class="product-badge">New</span>
+            <span class="product-badge new">New</span>
           </div>
           <div class="product-info">
             <div class="product-brand">ClimateIQ</div>
             <h3>Smart Thermostat Pro</h3>
-            <p>AI-powered learning thermostat. Saves up to 26% on energy bills. Touch display.</p>
+            <p>AI-powered learning thermostat. Saves up to 26% on energy bills.</p>
+            <div class="product-specs">
+              <span class="spec-chip"><i class="bi bi-cpu"></i> AI Learning</span>
+              <span class="spec-chip"><i class="bi bi-lightning"></i> Energy Saver</span>
+              <span class="spec-chip"><i class="bi bi-phone"></i> App Control</span>
+            </div>
             <div class="product-footer">
               <span class="product-price">$199.99</span>
-              <span class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.7</span>
+              <span class="product-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 4.7</span>
             </div>
           </div>
-          <div class="product-add-to-cart">
-            <a href="/contact" class="btn-cart">Add to Cart</a>
-          </div>
+          <div class="product-add-to-cart"><a href="/contact" class="btn-cart"><i class="bi bi-cart-plus"></i> Add to Cart</a></div>
         </div>
 
         <!-- Smart Door Lock -->
-        <div class="product-card" data-category="security">
+        <div class="product-card" data-category="security" data-aos="fade-up" data-aos-delay="0">
           <div class="product-image product-gallery"
-               data-images='[{"src":"https://images.unsplash.com/photo-1558002038-1055907df48c?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Door Lock — front view"},{"src":"https://images.unsplash.com/photo-1596171439526-c12c7dc89e8f?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Door Lock — keypad entry"},{"src":"https://images.unsplash.com/photo-1501196354995-cbb51c65acea?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Door Lock — installed on door"},{"src":"https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Door Lock — hardware closeup"},{"src":"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Door Lock — app access codes"}]'
+               data-images='[{"src":"https://images.unsplash.com/photo-1558002038-1055907df48c?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Door Lock front"},{"src":"https://images.unsplash.com/photo-1596171439526-c12c7dc89e8f?auto=format&fit=crop&w=800&h=560&q=90","alt":"Keypad entry"},{"src":"https://images.unsplash.com/photo-1501196354995-cbb51c65acea?auto=format&fit=crop&w=800&h=560&q=90","alt":"Installed on door"},{"src":"https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=560&q=90","alt":"Hardware closeup"},{"src":"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=560&q=90","alt":"App access codes"}]'
                data-title="Smart Door Lock with Keypad">
           </div>
           <div class="product-info">
             <div class="product-brand">SecureView</div>
             <h3>Smart Door Lock with Keypad</h3>
-            <p>Fingerprint, code, app, and key access. Auto-lock, guest codes, activity log.</p>
+            <p>Fingerprint, code, app, and key access. Auto-lock with activity log.</p>
+            <div class="product-specs">
+              <span class="spec-chip"><i class="bi bi-fingerprint"></i> Biometric</span>
+              <span class="spec-chip"><i class="bi bi-key"></i> Multi-Access</span>
+              <span class="spec-chip"><i class="bi bi-journal-text"></i> Activity Log</span>
+            </div>
             <div class="product-footer">
               <span class="product-price">$179.99</span>
-              <span class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</span>
+              <span class="product-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 4.9</span>
             </div>
           </div>
-          <div class="product-add-to-cart">
-            <a href="/contact" class="btn-cart">Add to Cart</a>
-          </div>
+          <div class="product-add-to-cart"><a href="/contact" class="btn-cart"><i class="bi bi-cart-plus"></i> Add to Cart</a></div>
         </div>
 
         <!-- Smart Coffee Maker -->
-        <div class="product-card" data-category="kitchen">
+        <div class="product-card" data-category="kitchen" data-aos="fade-up" data-aos-delay="100">
           <div class="product-image product-gallery"
-               data-images='[{"src":"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Coffee Maker — machine front"},{"src":"https://images.unsplash.com/photo-1504630083234-14187a9df0f5?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Coffee Maker — kitchen counter scene"},{"src":"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Coffee Maker — brewing process"},{"src":"https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Coffee Maker — modern stainless design"},{"src":"https://images.unsplash.com/photo-1503104834685-7205e8607eb9?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Coffee Maker — fresh cup poured"}]'
+               data-images='[{"src":"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&h=560&q=90","alt":"Smart Coffee Maker front"},{"src":"https://images.unsplash.com/photo-1504630083234-14187a9df0f5?auto=format&fit=crop&w=800&h=560&q=90","alt":"Kitchen counter scene"},{"src":"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&h=560&q=90","alt":"Brewing process"},{"src":"https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&h=560&q=90","alt":"Stainless design"},{"src":"https://images.unsplash.com/photo-1503104834685-7205e8607eb9?auto=format&fit=crop&w=800&h=560&q=90","alt":"Fresh cup poured"}]'
                data-title="Wi-Fi Smart Coffee Maker">
             <span class="product-badge">Popular</span>
           </div>
           <div class="product-info">
             <div class="product-brand">BrewSmart</div>
             <h3>Wi-Fi Smart Coffee Maker</h3>
-            <p>Schedule brews from your phone. 12-cup capacity, temperature control, auto-clean.</p>
+            <p>Schedule brews from your phone. 12-cup, temperature control.</p>
+            <div class="product-specs">
+              <span class="spec-chip"><i class="bi bi-wifi"></i> Wi-Fi</span>
+              <span class="spec-chip"><i class="bi bi-clock"></i> Scheduler</span>
+              <span class="spec-chip"><i class="bi bi-cup-hot"></i> 12-Cup</span>
+            </div>
             <div class="product-footer">
               <span class="product-price">$89.99</span>
-              <span class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6</span>
+              <span class="product-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 4.6</span>
             </div>
           </div>
-          <div class="product-add-to-cart">
-            <a href="/contact" class="btn-cart">Add to Cart</a>
-          </div>
+          <div class="product-add-to-cart"><a href="/contact" class="btn-cart"><i class="bi bi-cart-plus"></i> Add to Cart</a></div>
         </div>
 
         <!-- LED Light Strip -->
-        <div class="product-card" data-category="lighting">
+        <div class="product-card" data-category="lighting" data-aos="fade-up" data-aos-delay="200">
           <div class="product-image product-gallery"
-               data-images='[{"src":"https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&h=560&q=90","alt":"LED Strip — product spool"},{"src":"https://images.unsplash.com/photo-1520004434-8b17aae35b14?auto=format&fit=crop&w=800&h=560&q=90","alt":"LED Strip — room ambiance installation"},{"src":"https://images.unsplash.com/photo-1573739022854-abceac2f8b2f?auto=format&fit=crop&w=800&h=560&q=90","alt":"LED Strip — ceiling cove lighting"},{"src":"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=560&q=90","alt":"LED Strip — bedroom wall accent"},{"src":"https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&h=560&q=90","alt":"LED Strip — lounge mood lighting"}]'
+               data-images='[{"src":"https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&h=560&q=90","alt":"LED Strip spool"},{"src":"https://images.unsplash.com/photo-1520004434-8b17aae35b14?auto=format&fit=crop&w=800&h=560&q=90","alt":"Room ambiance"},{"src":"https://images.unsplash.com/photo-1573739022854-abceac2f8b2f?auto=format&fit=crop&w=800&h=560&q=90","alt":"Ceiling cove lighting"},{"src":"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=560&q=90","alt":"Bedroom accent"},{"src":"https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&h=560&q=90","alt":"Lounge mood"}]'
                data-title="LED Light Strip 32ft RGB">
           </div>
           <div class="product-info">
             <div class="product-brand">Sicola Pro</div>
             <h3>LED Light Strip 32ft RGB</h3>
-            <p>Music sync, app controlled, 28 dynamic modes. Cut-to-length design. IP65.</p>
+            <p>Music sync, app controlled, 28 dynamic modes. Cut-to-length. IP65.</p>
+            <div class="product-specs">
+              <span class="spec-chip"><i class="bi bi-music-note-beamed"></i> Music Sync</span>
+              <span class="spec-chip"><i class="bi bi-rulers"></i> 32ft</span>
+              <span class="spec-chip"><i class="bi bi-droplet"></i> IP65</span>
+            </div>
             <div class="product-footer">
               <span class="product-price">$34.99</span>
-              <span class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</span>
+              <span class="product-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 4.8</span>
             </div>
           </div>
-          <div class="product-add-to-cart">
-            <a href="/contact" class="btn-cart">Add to Cart</a>
-          </div>
+          <div class="product-add-to-cart"><a href="/contact" class="btn-cart"><i class="bi bi-cart-plus"></i> Add to Cart</a></div>
         </div>
 
       </div>
@@ -290,41 +333,41 @@
   <!-- WHY CHOOSE US -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <div class="section-label">Why Sicola Essential</div>
-        <h2>Built on Trust, Powered by Innovation</h2>
-        <p>We go beyond selling products. We partner with you to create a smarter, more connected home experience.</p>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Why Sicola Essential</div>
+        <h2>Built on Trust, Powered by <span class="gradient-text">Innovation</span></h2>
+        <p>We go beyond selling products. We partner with you to create a smarter, more connected home.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">&#128640;</div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="bi bi-award"></i></div>
           <h3>Premium Quality</h3>
-          <p>Every product is rigorously tested and certified. We only stock devices that meet our strict quality standards and safety certifications.</p>
+          <p>Every product is rigorously tested and certified. We only stock devices meeting our strict quality and safety standards.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#129309;</div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="bi bi-headset"></i></div>
           <h3>Expert Support</h3>
-          <p>Our smart home specialists are available 24/7 to help with setup, troubleshooting, and customization of your smart home ecosystem.</p>
+          <p>Our smart home specialists are available 24/7 to help with setup, troubleshooting, and customization.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128176;</div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="bi bi-piggy-bank"></i></div>
           <h3>Best Value</h3>
-          <p>Competitive pricing with free shipping on orders over $99. We also offer bundle deals and seasonal promotions throughout the year.</p>
+          <p>Competitive pricing with free shipping on orders over $99. Bundle deals and seasonal promotions year-round.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128256;</div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="bi bi-arrow-return-left"></i></div>
           <h3>Easy Returns</h3>
-          <p>Not satisfied? Return any product within 30 days for a full refund, no questions asked. Your satisfaction is our top priority.</p>
+          <p>Not satisfied? Return any product within 30 days for a full refund, no questions asked.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128737;&#65039;</div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
           <h3>2-Year Warranty</h3>
-          <p>All products come with a comprehensive 2-year warranty covering manufacturing defects and hardware failures. Extended options available.</p>
+          <p>All products include a comprehensive 2-year warranty covering defects and hardware failures.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#127968;</div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="bi bi-house-heart"></i></div>
           <h3>Whole-Home Solutions</h3>
-          <p>We design complete smart home packages tailored to your needs. From single rooms to entire homes, we have you covered.</p>
+          <p>Complete smart home packages tailored to your needs. From single rooms to entire homes.</p>
         </div>
       </div>
     </div>
@@ -332,22 +375,23 @@
 
   <!-- STATS -->
   <section class="stats-section">
+    <div class="mesh-overlay"></div>
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item">
-          <h3>15,000+</h3>
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="0">
+          <h3><span class="gradient-text" data-count="15000">0</span>+</h3>
           <p>Happy Customers</p>
         </div>
-        <div class="stat-item">
-          <h3>500+</h3>
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+          <h3><span class="gradient-text" data-count="500">0</span>+</h3>
           <p>Products Available</p>
         </div>
-        <div class="stat-item">
-          <h3>98%</h3>
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+          <h3><span class="gradient-text" data-count="98">0</span>%</h3>
           <p>Satisfaction Rate</p>
         </div>
-        <div class="stat-item">
-          <h3>24/7</h3>
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+          <h3><span class="gradient-text">24/7</span></h3>
           <p>Customer Support</p>
         </div>
       </div>
@@ -355,41 +399,41 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="section">
+  <section class="testimonials-section">
     <div class="container">
-      <div class="section-header">
-        <div class="section-label">Customer Reviews</div>
-        <h2>What Our Customers Say</h2>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Customer Reviews</div>
+        <h2>What Our <span class="gradient-text">Customers Say</span></h2>
         <p>Real feedback from real homeowners who transformed their living spaces with Sicola Essential.</p>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
           <p>"The smart thermostat paid for itself in three months through energy savings. Setup was incredibly easy and support was fantastic."</p>
           <div class="testimonial-author">
-            <img class="testimonial-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&h=60&q=80" alt="James Mitchell" loading="lazy">
+            <img class="testimonial-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="James Mitchell" loading="lazy">
             <div>
               <div class="testimonial-name">James Mitchell</div>
               <div class="testimonial-role">Homeowner, Texas</div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
           <p>"Ordered a complete security package. The cameras are crystal clear and the smart locks give me peace of mind. Highly recommend!"</p>
           <div class="testimonial-author">
-            <img class="testimonial-photo" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=60&h=60&q=80" alt="Sarah Rodriguez" loading="lazy">
+            <img class="testimonial-photo" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80" alt="Sarah Rodriguez" loading="lazy">
             <div>
               <div class="testimonial-name">Sarah Rodriguez</div>
               <div class="testimonial-role">Property Manager, Florida</div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
           <p>"Best smart lighting I've found online. The app is intuitive, colors are vibrant, and customer service responded within minutes."</p>
           <div class="testimonial-author">
-            <img class="testimonial-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=60&h=60&q=80" alt="David Kim" loading="lazy">
+            <img class="testimonial-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80" alt="David Kim" loading="lazy">
             <div>
               <div class="testimonial-name">David Kim</div>
               <div class="testimonial-role">Interior Designer, California</div>
@@ -402,10 +446,14 @@
 
   <!-- CTA -->
   <section class="cta-section">
-    <div class="container">
+    <div class="mesh-overlay"></div>
+    <div class="container" data-aos="fade-up">
       <h2>Ready to Upgrade Your Home?</h2>
       <p>Join thousands of homeowners who've made the switch to smarter living with Sicola Essential.</p>
-      <a href="/products" class="btn btn-primary">Browse All Products &#8594;</a>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="/products" class="btn btn-primary">Browse All Products <i class="bi bi-arrow-right"></i></a>
+        <a href="/contact" class="btn btn-outline-light">Contact Us <i class="bi bi-chat-dots"></i></a>
+      </div>
     </div>
   </section>
 
@@ -414,18 +462,17 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo" style="color:white;">
-            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="40" height="40" rx="10" fill="url(#g1f)"/>
+          <a href="/" class="logo">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="10" fill="url(#lgf)"/>
               <path d="M20 8L7 19.5V32h8v-8h10v8h8V19.5L20 8z" fill="white"/>
-              <path d="M20 20c-1.5 0-2.7 1.2-2.7 2.7S18.5 25.4 20 25.4s2.7-1.2 2.7-2.7S21.5 20 20 20z" fill="#06B6D4"/>
-              <path d="M16 19.5q0-1.7 1.3-2.8t2.7-1.1 2.7 1.1 1.3 2.8" stroke="#06B6D4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-              <defs><linearGradient id="g1f" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#162035"/><stop offset="100%" stop-color="#0B1426"/></linearGradient></defs>
+              <circle cx="20" cy="22" r="2.5" fill="#00D4AA"/>
+              <defs><linearGradient id="lgf" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#162035"/><stop offset="1" stop-color="#0B1426"/></linearGradient></defs>
             </svg>
             Sicola Essential
           </a>
           <p>Premium smart home appliances for modern living. Transforming homes across America since 2024.</p>
-          <p style="margin-top:12px; font-size:0.82rem; color:#334155;">
+          <p style="margin-top:14px; font-size:0.8rem; color:rgba(255,255,255,0.35);">
             Sicola Essential LLC<br>
             Registered in the United States<br>
             EIN: Available upon request
@@ -467,40 +514,15 @@
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="/js/main.js"></script>
-  <!-- GALLERY + LIGHTBOX (shared with products page) -->
-  <style>
-    .gallery-main{position:relative;width:100%;height:260px;overflow:hidden;background:#0f172a;cursor:zoom-in;}
-    .gallery-main img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;}
-    .gallery-main:hover img{transform:scale(1.05);}
-    .gallery-thumbs{display:flex;gap:4px;padding:4px;background:#0B1426;}
-    .gallery-thumb{flex:1;height:54px;overflow:hidden;cursor:pointer;border-radius:4px;border:2px solid transparent;transition:border-color 0.2s;background:#162035;}
-    .gallery-thumb.active{border-color:var(--accent);}
-    .gallery-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s;}
-    .gallery-thumb:hover img{transform:scale(1.1);}
-    .gallery-zoom-btn{position:absolute;bottom:10px;right:10px;z-index:3;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:6px;padding:5px 9px;font-size:14px;cursor:pointer;backdrop-filter:blur(4px);transition:background 0.2s;}
-    .gallery-zoom-btn:hover{background:rgba(6,182,212,0.8);}
-    #lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;flex-direction:column;}
-    #lightbox.open{display:flex;}
-    #lb-img{max-width:90vw;max-height:78vh;object-fit:contain;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,0.8);}
-    .lb-close{position:fixed;top:20px;right:24px;color:#fff;font-size:2rem;background:none;border:none;cursor:pointer;z-index:10000;opacity:0.8;}
-    .lb-close:hover{opacity:1;color:var(--accent);}
-    .lb-prev,.lb-next{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:1.6rem;width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;z-index:10000;}
-    .lb-prev{left:16px;}.lb-next{right:16px;}
-    .lb-prev:hover,.lb-next:hover{background:var(--accent);border-color:var(--accent);}
-    .lb-dots{display:flex;gap:8px;margin-top:16px;}
-    .lb-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:background 0.2s,transform 0.2s;}
-    .lb-dot.active{background:var(--accent);transform:scale(1.3);}
-    .lb-thumbs{display:flex;gap:8px;margin-top:12px;max-width:90vw;overflow-x:auto;padding-bottom:4px;}
-    .lb-thumb{width:72px;height:50px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid transparent;transition:border-color 0.2s;flex-shrink:0;}
-    .lb-thumb.active{border-color:var(--accent);}
-    .lb-caption{color:#cbd5e1;font-size:0.85rem;margin-top:10px;text-align:center;}
-    .spec-tag{background:var(--bg-soft);border:1px solid var(--border);color:var(--text-light);font-size:0.68rem;padding:2px 8px;border-radius:20px;display:inline-flex;align-items:center;gap:3px;margin:2px;}
-  </style>
+
+  <!-- GALLERY + LIGHTBOX -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Product Image Gallery">
     <button class="lb-close" id="lb-close">&times;</button>
-    <button class="lb-prev" id="lb-prev">&#8592;</button>
-    <button class="lb-next" id="lb-next">&#8594;</button>
+    <button class="lb-prev" id="lb-prev"><i class="bi bi-chevron-left"></i></button>
+    <button class="lb-next" id="lb-next"><i class="bi bi-chevron-right"></i></button>
     <div><img id="lb-img" src="" alt=""></div>
     <div class="lb-dots" id="lb-dots"></div>
     <div class="lb-thumbs" id="lb-thumbs"></div>
@@ -514,7 +536,7 @@
       var main=document.createElement('div');main.className='gallery-main';main.setAttribute('data-idx','0');
       var badge=el.querySelector('.product-badge');if(badge)main.appendChild(badge.cloneNode(true));
       var img=document.createElement('img');img.src=images[0].src;img.alt=images[0].alt;img.loading='lazy';img.width=800;img.height=560;main.appendChild(img);
-      var zb=document.createElement('button');zb.className='gallery-zoom-btn';zb.innerHTML='&#x26F6;';zb.setAttribute('aria-label','View gallery');main.appendChild(zb);
+      var zb=document.createElement('button');zb.className='gallery-zoom-btn';zb.innerHTML='<i class="bi bi-arrows-fullscreen"></i> View';zb.setAttribute('aria-label','View gallery');main.appendChild(zb);
       el.innerHTML='';el.appendChild(main);
       var tr=document.createElement('div');tr.className='gallery-thumbs';
       images.forEach(function(im,i){var t=document.createElement('div');t.className='gallery-thumb'+(i===0?' active':'');t.setAttribute('data-idx',i);var ti=document.createElement('img');ti.src=im.src.replace('w=800&h=560','w=200&h=140');ti.alt=im.alt;ti.loading='lazy';t.appendChild(ti);tr.appendChild(t);});
