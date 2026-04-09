@@ -8,14 +8,21 @@
   <link rel="canonical" href="https://sicolaessential.us/about">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='%230B1426'/><path d='M20 8L7 19.5V32h8v-8h10v8h8V19.5L20 8z' fill='white'/><circle cx='20' cy='22.7' r='2.7' fill='%2306B6D4'/><path d='M16 19.5q0-1.7 1.3-2.8t2.7-1.1 2.7 1.1 1.3 2.8' stroke='%2306B6D4' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>">
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="header">
     <nav class="nav">
       <a href="/" class="logo">
-        <div class="logo-icon">SE</div>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="url(#ga1)"/>
+          <path d="M20 8L7 19.5V32h8v-8h10v8h8V19.5L20 8z" fill="white"/>
+          <path d="M20 20c-1.5 0-2.7 1.2-2.7 2.7S18.5 25.4 20 25.4s2.7-1.2 2.7-2.7S21.5 20 20 20z" fill="#06B6D4"/>
+          <path d="M16 19.5q0-1.7 1.3-2.8t2.7-1.1 2.7 1.1 1.3 2.8" stroke="#06B6D4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <defs><linearGradient id="ga1" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#0B1426"/><stop offset="100%" stop-color="#162035"/></linearGradient></defs>
+        </svg>
         Sicola Essential
       </a>
       <ul class="nav-links">
@@ -25,10 +32,11 @@
         <li><a href="/contact">Contact</a></li>
         <li><a href="/contact" class="nav-cta">Get a Quote</a></li>
       </ul>
-      <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+      <button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button>
     </nav>
   </header>
 
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
       <h1>About Sicola Essential</h1>
@@ -43,13 +51,11 @@
         <div class="about-text">
           <h2>Our Story</h2>
           <p>Sicola Essential LLC was founded in 2024 with a clear mission: to bring premium smart home technology to everyday households at accessible price points. Based in the United States, we source and distribute the most innovative home automation products available on the market.</p>
-          <p>We recognized that the smart home industry was fragmented - quality products existed but were often overpriced or difficult to integrate. Sicola Essential bridges that gap by curating the best devices, ensuring compatibility, and providing the support homeowners need to build their smart home ecosystem.</p>
+          <p>We recognized that the smart home industry was fragmented — quality products existed but were often overpriced or difficult to integrate. Sicola Essential bridges that gap by curating the best devices, ensuring compatibility, and providing the support homeowners need to build their smart home ecosystem.</p>
           <p>Today, we serve over 15,000 customers across all 50 states, offering more than 500 products across lighting, security, climate, and kitchen categories. Our team of smart home specialists work around the clock to ensure every customer has a seamless experience.</p>
         </div>
         <div class="about-visual">
-          <div class="about-visual-icon">&#127968;</div>
-          <h3 style="font-size:1.3rem; font-weight:700; color:var(--primary);">Smart Homes,<br>Made Simple</h3>
-          <p style="color:var(--text-light); margin-top:12px;">Since 2024</p>
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&h=500&q=80" alt="Smart Home Interior" loading="lazy" style="width:100%;height:auto;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
         </div>
       </div>
     </div>
@@ -64,36 +70,81 @@
         <p>Core principles that guide every decision we make and every product we sell.</p>
       </div>
       <div class="values-grid">
+
+        <!-- Quality First -->
         <div class="value-card">
-          <div class="icon">&#127775;</div>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
           <h3>Quality First</h3>
           <p>We test every product before listing it. Our quality assurance process includes safety certification verification, performance testing, and long-term reliability assessment.</p>
         </div>
+
+        <!-- Customer Obsession -->
         <div class="value-card">
-          <div class="icon">&#128101;</div>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
           <h3>Customer Obsession</h3>
           <p>Our customers are at the heart of everything we do. From 24/7 support to our hassle-free return policy, we go above and beyond to ensure complete satisfaction.</p>
         </div>
+
+        <!-- Sustainability -->
         <div class="value-card">
-          <div class="icon">&#127793;</div>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
           <h3>Sustainability</h3>
           <p>Many of our products help reduce energy consumption. We prioritize eco-friendly packaging and partner with manufacturers committed to sustainable practices.</p>
         </div>
+
+        <!-- Innovation -->
         <div class="value-card">
-          <div class="icon">&#128200;</div>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
           <h3>Innovation</h3>
           <p>The smart home industry moves fast. We continuously evaluate emerging technologies and update our catalog to include the latest and most impactful devices.</p>
         </div>
+
+        <!-- Integrity -->
         <div class="value-card">
-          <div class="icon">&#129309;</div>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
           <h3>Integrity</h3>
           <p>Transparent pricing, honest product descriptions, and ethical business practices. We build lasting relationships through trust and reliability.</p>
         </div>
+
+        <!-- Accessibility -->
         <div class="value-card">
-          <div class="icon">&#127760;</div>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
           <h3>Accessibility</h3>
           <p>Smart home technology should be for everyone. We offer competitive pricing, flexible payment options, and educational resources to help all homeowners.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -108,19 +159,19 @@
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <div class="team-avatar">MS</div>
+          <img class="team-photo" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80" alt="Michael Sicola, Founder and CEO" loading="lazy">
           <h3>Michael Sicola</h3>
-          <div class="role">Founder & CEO</div>
+          <div class="role">Founder &amp; CEO</div>
           <p>Visionary entrepreneur with deep expertise in IoT and home automation technologies. Leads company strategy and product vision.</p>
         </div>
         <div class="team-card">
-          <div class="team-avatar">JW</div>
+          <img class="team-photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80" alt="Jennifer Walsh, Head of Operations" loading="lazy">
           <h3>Jennifer Walsh</h3>
           <div class="role">Head of Operations</div>
           <p>Manages supply chain, logistics, and fulfillment. Ensures every order is processed and shipped with care and efficiency.</p>
         </div>
         <div class="team-card">
-          <div class="team-avatar">RT</div>
+          <img class="team-photo" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&h=200&q=80" alt="Ryan Torres, Lead Product Specialist" loading="lazy">
           <h3>Ryan Torres</h3>
           <div class="role">Lead Product Specialist</div>
           <p>Smart home expert who evaluates, tests, and curates our product catalog. Ensures every device meets our quality standards.</p>
@@ -139,7 +190,7 @@
         <p style="color:var(--text-light); line-height:1.8; margin-bottom:12px;"><strong>Legal Name:</strong> Sicola Essential LLC</p>
         <p style="color:var(--text-light); line-height:1.8; margin-bottom:12px;"><strong>Entity Type:</strong> Limited Liability Company (LLC)</p>
         <p style="color:var(--text-light); line-height:1.8; margin-bottom:12px;"><strong>Jurisdiction:</strong> United States of America</p>
-        <p style="color:var(--text-light); line-height:1.8; margin-bottom:12px;"><strong>Industry:</strong> Retail - Smart Home Appliances & Technology</p>
+        <p style="color:var(--text-light); line-height:1.8; margin-bottom:12px;"><strong>Industry:</strong> Retail - Smart Home Appliances &amp; Technology</p>
         <p style="color:var(--text-light); line-height:1.8; margin-bottom:12px;"><strong>Founded:</strong> 2024</p>
         <p style="color:var(--text-light); line-height:1.8; margin-bottom:12px;"><strong>Website:</strong> <a href="https://sicolaessential.us">sicolaessential.us</a></p>
         <p style="color:var(--text-light); line-height:1.8;"><strong>Email:</strong> <a href="mailto:info@sicolaessential.us">info@sicolaessential.us</a></p>
@@ -159,16 +210,23 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo" style="color:white;">
-            <div class="logo-icon">SE</div>
+          <a href="/" class="logo" style="color:white;">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="url(#gaf1)"/>
+              <path d="M20 8L7 19.5V32h8v-8h10v8h8V19.5L20 8z" fill="white"/>
+              <path d="M20 20c-1.5 0-2.7 1.2-2.7 2.7S18.5 25.4 20 25.4s2.7-1.2 2.7-2.7S21.5 20 20 20z" fill="#06B6D4"/>
+              <path d="M16 19.5q0-1.7 1.3-2.8t2.7-1.1 2.7 1.1 1.3 2.8" stroke="#06B6D4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <defs><linearGradient id="gaf1" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#162035"/><stop offset="100%" stop-color="#0B1426"/></linearGradient></defs>
+            </svg>
             Sicola Essential
-          </div>
+          </a>
           <p>Premium smart home appliances for modern living. Transforming homes across America since 2024.</p>
-          <p style="margin-top:12px; font-size:0.85rem; color:#475569;">
+          <p style="margin-top:12px; font-size:0.82rem; color:#334155;">
             Sicola Essential LLC<br>
             Registered in the United States<br>
             EIN: Available upon request
