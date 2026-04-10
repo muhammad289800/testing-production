@@ -14,7 +14,12 @@ app.use(helmet({
 
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '1d',
-  etag: true
+  etag: true,
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    }
+  }
 }));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
