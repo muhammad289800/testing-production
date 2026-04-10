@@ -57,6 +57,8 @@
         <button class="filter-btn" data-filter="climate"><i class="bi bi-thermometer-half"></i> Climate</button>
         <button class="filter-btn" data-filter="kitchen"><i class="bi bi-cup-hot"></i> Kitchen</button>
         <button class="filter-btn" data-filter="hub"><i class="bi bi-hdd-network"></i> Hubs</button>
+        <button class="filter-btn" data-filter="decor"><i class="bi bi-house-heart"></i> Home Decor</button>
+        <button class="filter-btn" data-filter="furniture"><i class="bi bi-aspect-ratio"></i> Furniture</button>
       </div>
 
       <div class="products-grid">
@@ -520,6 +522,59 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/products-data.js"></script>
+  <script>
+  // Inject library products into the grid
+  (function() {
+    var grid = document.querySelector('.products-grid');
+    if (!grid || typeof LIBRARY_PRODUCTS === 'undefined') return;
+
+    var catIcons = {
+      kitchen: 'bi-basket',
+      decor: 'bi-house-heart',
+      furniture: 'bi-aspect-ratio'
+    };
+
+    LIBRARY_PRODUCTS.forEach(function(p) {
+      var badge = '';
+      if (p.discountPct > 10) badge = '<span class="product-badge sale">-' + p.discountPct + '% OFF</span>';
+      else if (p.rating >= 4.5) badge = '<span class="product-badge">Top Rated</span>';
+
+      var imagesJson = JSON.stringify(p.images.map(function(src, i) {
+        return {src: src, alt: p.title + ' ' + (i+1)};
+      })).replace(/"/g, '&quot;');
+
+      var originalPrice = p.originalPrice ? '<span class="old">$' + p.originalPrice.toFixed(2) + '</span>' : '';
+
+      var tags = (p.tags || []).slice(0,4).map(function(t) {
+        return '<span class="spec-chip">' + t + '</span>';
+      }).join('');
+
+      var card = '<div class="product-card" data-category="' + p.category + '" data-aos="fade-up">' +
+        '<div class="product-image product-gallery" data-images="' + imagesJson + '" data-title="' + p.title.replace(/"/g,'&quot;') + '">' +
+        badge +
+        '<img src="' + p.thumbnail + '" alt="' + p.title + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">' +
+        '</div>' +
+        '<div class="product-info">' +
+        '<div class="product-brand">' + (p.brand || 'Sicola Essential') + '</div>' +
+        '<h3>' + p.title + '</h3>' +
+        '<p>' + p.description.slice(0, 120) + (p.description.length > 120 ? '...' : '') + '</p>' +
+        '<div class="product-specs">' + tags + '</div>' +
+        '<div class="product-footer">' +
+        '<span class="product-price">$' + p.price.toFixed(2) + ' ' + originalPrice + '</span>' +
+        '<span class="product-rating"><i class="bi bi-star-fill"></i> ' + p.rating + '</span>' +
+        '</div>' +
+        '</div>' +
+        '<div class="product-add-to-cart"><a href="/contact" class="btn-cart"><i class="bi bi-cart-plus"></i> Add to Cart</a></div>' +
+        '</div>';
+
+      grid.insertAdjacentHTML('beforeend', card);
+    });
+
+    // Re-init gallery on new cards
+    if (typeof initGalleries === 'function') initGalleries();
+  })();
+  </script>
   <script>
   (function(){
     document.querySelectorAll('.product-gallery').forEach(function(el){
